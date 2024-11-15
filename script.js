@@ -1,17 +1,19 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
     const facts = [
-        "I like architecture and nature, with a love for palaces and gardens.",
-        "I like coastal environments, particularly beaches.",
-        "I like observing puppies and fishes, indicating a fondness for animals from a distance."
+        "I like gardening.",
+        "I am an engineering student and like to code.",
+        "I like trying different varieties of food.",
+        "I like photography."
     ];
 
-    const factsContainer = document.getElementById('fun-facts');
+    let currentFactIndex = 0;
+    const factsContainer = document.getElementById('fun-fact');
+    const revealButton = document.getElementById('reveal-fact');
 
-    facts.forEach(fact => {
-        const factElement = document.createElement('div');
-        factElement.className = 'fact';
-        factElement.textContent = fact;
-        factsContainer.appendChild(factElement);
+    revealButton.addEventListener('click', () => {
+        factsContainer.textContent = facts[currentFactIndex];
+        currentFactIndex = (currentFactIndex + 1) % facts.length;
     });
 });
+
