@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const facts = [
         "Enthusiast of architecture and nature, with a love for palaces and gardens.",
